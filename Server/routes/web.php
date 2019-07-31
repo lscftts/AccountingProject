@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/insert', function () {
+	return view('insert');
+    //DB::insert('insert into data(who,description) values(?, ?)',['AA','BB']);
+});
+
+Route::get('/index', 'DataController@index');
